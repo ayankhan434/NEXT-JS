@@ -1,27 +1,23 @@
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 
-const roboto = Roboto({
-  subsets:["latinj"],
-  weight: ['600',"300"],
-  display: 'swap'
-})
+const poppins=Poppins({subsets:['latin'],weight:['400','600'],display:'swap'})
 
-export const metadata = {
-  title: "Travel Guide Website",
-  description: "Best Travel Guidance",
-};
+export const metadata={
+  title:"Travel Guide Website",
+  description:"best travel guidence"
+}
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en">
-      <body className={`${roboto.className} w-screen h-screen bg-amber-600` }>
-        
+    <html lang="en">
+      <body
+        className={`${poppins.className} w-screen h-screen bg-black`}
+      >
         <Nav/>
         {children}
-        </body>
+      </body>
     </html>
   );
 }
