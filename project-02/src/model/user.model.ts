@@ -11,6 +11,7 @@ import mongoose, { ObjectId } from "mongoose"
     // that will be function in our schema
  }
  
+ 
  const userSchema = new mongoose.Schema<Iuser>({
 
  name:{
@@ -34,5 +35,11 @@ import mongoose, { ObjectId } from "mongoose"
 
  }
  },{timestamps:true})
+
+ const User= mongoose.models.User|| mongoose.model('User',userSchema)
+
+ export default User
+
+
 
 
